@@ -7,12 +7,16 @@ import {
 import './App.css';
 import Main from './views/main';
 import Detail from './views/detail';
+import Update from './views/update';
 
 function App() {
   return (
     <BrowserRouter>
     <div className="App">
       <Switch>
+        <Route path='/:id/edit'>
+          <Update />
+        </Route>
         <Route path='/:id'>
           <Detail />
         </Route>
